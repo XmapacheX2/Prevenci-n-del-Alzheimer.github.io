@@ -1,0 +1,439 @@
+:root {
+    --color-principal: #007bff;
+    --color-secundario: #0056b3;
+    --color-fondo: #f4f7f6;
+    --color-texto: #333;
+    --color-acento: #28a745; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.logo i {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107; 
+}
+
+.hero {
+    background: url('foto/fondo_cerebro.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #1e7e34;
+}
+
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pillar-card {
+    background-color: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    cursor: help; 
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.icon-large {
+    font-size: 3rem;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+.pillar-card h3 {
+    margin-bottom: 10px;
+    color: var(--color-secundario);
+}
+
+.pillar-card::before {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.pillar-card:hover::before {
+    opacity: 1;
+}
+
+.exercise-box {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.sequence-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin: 20px 0;
+    text-align: center;
+    min-height: 30px;
+}
+
+.exercise-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-group button:first-child { 
+    background-color: var(--color-acento);
+    color: white;
+}
+
+.button-group button:last-child { 
+    background-color: #ffc107;
+    color: var(--color-texto);
+}
+
+#feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.question-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.quiz-container button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.quiz-container button:hover {
+    background-color: var(--color-secundario);
+}
+
+.result-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--color-texto);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    
+    /* === HEADER y Navegación === */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        height: 50vh; 
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .section {
+        padding: 30px 15px; 
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .pillar-card {
+        width: 100%;
+        margin-bottom: 20px;
+        transform: none !important; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    }
+
+    .pillar-card::before {
+        display: none; 
+    }
+
+    .exercise-box, .quiz-container {
+        padding: 20px 15px;
+    }
+
+    .sequence-text {
+        font-size: 1.2rem;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button-group button {
+        flex-grow: 1;
+        margin: 0 5px;
+    }
+
+    .info-content-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .text-block {
+        width: 100%;
+    }
+    
+    .full-width-card {
+        width: 100%; /* El 5to hábito también ocupa todo el ancho en móvil */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes muy pequeños para dispositivos estrechos */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .button-group button {
+        margin: 5px 0;
+    }
+}
+
+.info-section {
+    background-color: white;
+    padding-bottom: 60px;
+}
+
+.info-content-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.text-block {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.text-block h3 {
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-principal);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.risk-factors ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.risk-factors ul li {
+    background: #f8f9fa;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    border-left: 3px solid #dc3545; 
+}
+
+.full-width-card {
+    width: 90%; 
+    max-width: 600px;
+}

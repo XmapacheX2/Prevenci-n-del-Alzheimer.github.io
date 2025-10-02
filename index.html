@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prevención del Alzheimer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <h1>Medidas preventivas | Alzheimer</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#pilares">Hábitos</a></li>
+                <li><a href="#autoevaluacion">Autoevaluación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fortalece tu Cerebro. Previene el Alzheimer.</h1>
+            <p>El poder de la prevención está en tus hábitos diarios. ¡Empieza hoy!</p>
+            <a href="#informacion" class="cta-button">Empezar con la Prevención</a>
+        </div>
+    </section>
+    
+    <section class="section info-section" id="informacion">
+        <h2>🔬 ¿Qué es el Alzheimer?</h2>
+        
+        <div class="info-content-container">
+            <div class="text-block">
+                <h3>Definición de la Enfermedad</h3>
+                <p>
+                    El Alzheimer es una <strong>enfermedad neurodegenerativa</strong> progresiva que afecta la memoria, el pensamiento y la conducta. Es la causa más común de demencia y sus síntomas empeoran con el tiempo, interfiriendo gravemente con la vida diaria.
+                </p>
+                <p>
+                    Actualmente, <storng>no tiene cura</storng>, pero la ciencia ha demostrado que se puede <sterong>prevenir o retrasar significativamente su aparición</sterong> adoptando un estilo de vida proactivo y saludable.
+                </p>
+            </div>
+            
+            <div class="text-block risk-factors">
+                <h3><i class="fas fa-exclamation-triangle"></i> Factores de Riesgo</h3>
+                <ul>
+                    <li><strong>Edad avanzada:</strong> Es el factor de riesgo más importante.</li>
+                    <li><strong>Antecedentes familiares:</strong> La genética juega un papel, aunque no es el único factor.</li>
+                    <li><strong>Estilo de vida poco saludable:</strong> Sedentarismo, mala alimentación, tabaquismo y consumo excesivo de alcohol.</li>
+                    <li><strong>Enfermedades crónicas:</strong> Diabetes, hipertensión y colesterol alto (lo que daña los vasos sanguíneos del cerebro).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="pilares">
+        <h2>🌱 Hábitos para Prevenir el Alzheimer</h2>
+        <p class="section-subtitle">Tus acciones diarias son tu mejor defensa contra el deterioro cognitivo.</p>
+        
+        <div class="card-container interactive-cards">
+            
+            <div class="card pillar-card" data-tip="Caminar, nadar o bailar. ¡3 veces a la semana! Mejora la oxigenación cerebral.">
+                <i class="fas fa-running icon-large"></i>
+                <h3>1. Ejercicio Físico</h3>
+                <p>Cualquier actividad aeróbica. Mejora la circulación y oxigena el cerebro.</p>
+            </div>
+
+            <div class="card pillar-card" data-tip="Dieta Mediterránea: Frutas, verduras, aceite de oliva y pescado. Reduce azúcares.">
+                <i class="fas fa-carrot icon-large"></i>
+                <h3>2. Alimentación Saludable</h3>
+                <p>Dieta rica en antioxidantes y Omega-3 para nutrir las neuronas.</p>
+            </div>
+
+            <div class="card pillar-card" data-tip="Leer, aprender cosas nuevas, jugar ajedrez, o hacer crucigramas. ¡Mantente activo! ">
+                <i class="fas fa-puzzle-piece icon-large"></i>
+                <h3>3. Estimulación Mental</h3>
+                <p>El aprendizaje constante fortalece y crea nuevas conexiones neuronales.</p>
+            </div>
+
+            <div class="card pillar-card" data-tip="Evitar el aislamiento. Contacto social y técnicas de relajación contra el estrés.">
+                <i class="fas fa-users icon-large"></i>
+                <h3>4. Salud Emocional y Social</h3>
+                <p>El contacto social estimula la mente; la relajación reduce el estrés crónico.</p>
+            </div>
+            
+            <div class="card pillar-card full-width-card" data-tip="Controla tu presión, azúcar y colesterol. Dormir bien (7-8 horas) es vital.">
+                <i class="fas fa-heartbeat icon-large"></i>
+                <h3>5. Cuidar la Salud Física</h3>
+                <p>Controlar enfermedades como diabetes e hipertensión. <strong>Dormir bien (7-8 horas)</strong>.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="section" id="ejercicios">
+        <h2>🕹️ Gimnasio Cognitivo</h2>
+        <p class="section-subtitle">Reta a tu cerebro con nuestro ejercicio de memoria.</p>
+        
+        <div class="exercise-box">
+            <h3>Ejercicio: Recuerda la Secuencia</h3>
+            <p id="sequence-display" class="sequence-text">Presiona 'Iniciar' para ver la secuencia de números.</p>
+            <input type="text" id="user-input" placeholder="Escribe la secuencia aquí (separada por comas)" disabled>
+            <div class="button-group">
+                <button onclick="startSequence()">Iniciar</button>
+                <button onclick="checkSequence()" disabled id="check-btn">Comprobar</button>
+            </div>
+            <p id="feedback"></p>
+        </div>
+    </section>
+    
+    <section class="section" id="autoevaluacion">
+        <h2>✅ Autoevaluación Rápida de Hábitos</h2>
+        <p class="section-subtitle">¿Qué tan bien estás cuidando tu mente?</p>
+
+        <div class="quiz-container">
+            <div class="question-item">
+                <p>1. ¿Practicas ejercicio aeróbico (caminar rápido, nadar) al menos 3 veces a la semana?</p>
+                <input type="radio" name="q1" value="yes"> Sí
+                <input type="radio" name="q1" value="no"> No
+            </div>
+            <div class="question-item">
+                <p>2. ¿Dedicas tiempo a aprender una habilidad nueva (idioma, instrumento) o hacer crucigramas mensualmente?</p>
+                <input type="radio" name="q2" value="yes"> Sí
+                <input type="radio" name="q2" value="no"> No
+            </div>
+            <div class="question-item">
+                <p>3. ¿Consumes frutos secos, pescado azul o aceite de oliva (grasas saludables) regularmente?</p>
+                <input type="radio" name="q3" value="yes"> Sí
+                <input type="radio" name="q3" value="no"> No
+            </div>
+            
+            <button onclick="calculateScore()">Ver mi Puntaje</button>
+            <p id="quiz-result" class="result-text"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Medidas preventivas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
